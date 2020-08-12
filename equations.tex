@@ -1,0 +1,186 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ %total={170mm,257mm},
+ left=25mm,
+ top=25mm,
+ bottom=25mm,
+ right=25mm
+ }
+\linespread{1.5}
+
+\usepackage[fleqn]{amsmath}
+
+\begin{document}
+
+\section{Equations}
+
+\begin{equation}
+\frac{\partial{S}}{\partial{t}}=P - ET - R - \nabla\cdot Q\\
+\end{equation}
+
+\begin{equation}
+ R_{net} = LH + SH + G
+\end{equation}
+
+\begin{equation}
+\mathbf{F}_{v} = \rho q \mathbf{v}\\
+\end{equation}
+where $\rho$ is the density; $q$ is the specific humidity; and $\mathbf{v}$ is the velocity vector.\\
+
+
+\begin{equation}
+\mathbf{F}_{v} = \mathbf{i}F_{vx}+\mathbf{j}F_{vy}+\mathbf{k}F_{vz}\\
+%
+\mathbf{v} = \mathbf{i}u+\mathbf{j}v+\mathbf{k}w\\
+\end{equation}
+%
+where $\mathbf{i}$,  $\mathbf{j}$, and  $\mathbf{k}$ are the unit vectors.\\
+
+\begin{equation}
+\overline{F_{vx}} = \rho(\overline{u}\phantom{.}\overline{q}+\overline{u'q'})\\
+%
+\overline{F_{vy}} = \rho(\overline{v}\phantom{.}\overline{q}+\overline{v'q'})\\
+%
+\overline{F_{vz}} = \rho(\overline{w}\phantom{.}\overline{q}+\overline{w'q'})\\
+\end{equation}
+
+\begin{equation}
+\frac{\partial{\rho}}{\partial{t}}+\nabla\cdot(\rho\mathbf{v})=0\\
+\end{equation}
+
+\begin{equation}
+\frac{\overline{\partial{q}}}{\partial{t}}+\overline{u}\frac{\overline{\partial{q}}}{\partial{x}}+\overline{v}\frac{\overline{\partial{q}}}{\partial{x}}+\overline{w}
+%
+\frac{\overline{\partial{q}}}{\partial{z}} = -[\frac{\partial{}}{\partial{x}}(\overline{u'q'})+\frac{\partial{}}{\partial{y}}(\overline{v'q'})+\frac{\partial{}}{\partial{z}}(\overline{w'q'})]\\
+\end{equation}
+
+\begin{equation}
+\frac{\partial{\overline{q}}}{\partial{t}}=0\phantom{XX}and\phantom{XX}(\frac{\partial{}}{\partial{x}},\frac{\partial{}}{\partial{y}})=0 \phantom{XX}and\phantom{XX} \overline{w}=0\\
+\end{equation}
+
+\begin{equation}
+F_{vz}=\rho\overline{w'z'}\equiv LH\\
+\end{equation}
+
+\begin{equation}
+F_{mz}=\rho\overline{w'u'}\equiv\tau=\tau_{0}\\
+%
+F_{hz}=\rho c_{p}\overline{w'\theta'}\equiv SH\\
+\end{equation}
+for the momentum $\tau_{0}$ and sensible heat flux $SH$, respectively. 
+
+Shear stress
+\begin{equation}
+u_{*}=(\tau_{0}/\rho)^{1/2}\\
+%
+u_{*}^{2}=\rho\overline{w'u'}=F_{mz}\\
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\overline{w'q'}&=-C_{e}(\overline{u_{2}}-\overline{u_{1}})(\overline{q_{4}}-\overline{q_{3}})\\
+%
+\overline{w'\theta'}&=-C_{h}(\overline{u_{2}}-\overline{u_{1}})(\overline{\theta_{4}}-\overline{\theta_{3}})\\
+%
+\overline{w'u'}&=-C_{e}(\overline{u_{2}}-\overline{u_{1}})^{2}\\
+%
+\end{split}
+\end{equation}
+
+\begin{equation}
+\frac{u_{}*}{(z-d_{0})(d\overline{u}/dz)}=k\\
+\overline{u_{2}}-\overline{u_{1}}=\frac{u_{*}}{k}{ln}(\frac{z_{2}-d_{0}}{z_{1}-d_{0}})\\
+%
+\overline{u}=\frac{u_{*}}{k}{ln}(\frac{z-d_{0}}{z_{0}})\\
+%
+C_{d}={k/ln[(z-d_{0})/z_{0}]}\\
+\end{equation}
+
+Monin-Obukhov length
+
+$$L=\frac{-u^{3}_{*}\rho}{kg[ \frac{H}{T_{a}c_{p}} + 0.61E ]}$$
+
+Steady turbulent kinetic energy equation
+\begin{equation}
+\overline{u'w'}\frac{\partial{\overline{u}}}{\partial{z}} -
+ \frac{g}{T_{VS}} [\overline{w'\theta’}+
+ 0.61\overline{T}\phantom{.}\overline{w'q'}]+
+ \frac{\partial{}}{\partial{z}} (\overline{w'e_{t}} + \frac{\overline{w'p'}}{\rho}) = -\epsilon
+\end{equation}
+where the first term on the left hand side is the mechanical production of turbulence; the second term is the contribution due to buoycany forces, $\frac{1}{\rho}\nabla p$; and the third is the divergence of the turbulent flux of the total turbulent energy. All the production terms are balanced by $\epsilon$ representing viscous effects that are dissipating the energy constituting the sink. \\
+\\
+
+Rewriting $L$\\
+\begin{equation}
+\ L{kg[ \frac{H}{T_{a}c_{p}} + 0.61E ]}={-u^{3}_{*}\rho}\\
+\end{equation}
+%
+\begin{align*}
+\overline{w'q'}&=-C_{e}(\overline{u_{2}}-\overline{u_{1}})(\overline{q_{4}}-\overline{q_{3}})\\
+%
+\overline{w'\theta'}&=-C_{h}(\overline{u_{2}}-\overline{u_{1}})(\overline{\theta_{4}}-\overline{\theta_{3}})\\
+%
+\overline{w'u'}&=-C_{e}(\overline{u_{2}}-\overline{u_{1}})^{2}\\
+%
+\frac{u_{}*}{(z-d_{0})(d\overline{u}/dz)}&=k\\
+%
+\overline{u_{2}}-\overline{u_{1}}&=\frac{u_{*}}{k}{ln}(\frac{z_{2}-d_{0}}{z_{1}-d_{0}})\\
+%
+\overline{u}&=\frac{u_{*}}{k}{ln}(\frac{z-d_{0}}{z_{0}})\\
+%
+C_{d}&={k/ln[(z-d_{0})/z_{0}]}\\
+%
+\end{align*}
+
+Darcy’s law
+\begin{equation} q=K \frac{\Delta h}{\Delta l} = \frac{dh}{dl} \end{equation}
+\begin{equation}Q=Aq\end{equation}
+
+Linear velocity
+\begin{equation}\overline{v}=\frac{q}{\phi}=\frac{K}{\phi}\frac{dh}{dl}\end{equation}
+\begin{equation}A_{eff}=A\phi\end{equation}
+
+Hydraulic conductivity
+\begin{equation}K=\frac{k \rho g}{\mu} [L/T]\end{equation}
+
+Potential
+\begin{equation}\oint \mathbf{F} \,ds = 0\end{equation}
+\begin{equation}\int_{a}^{b} \mathbf{F} ds = W\end{equation}
+
+Elevation potential
+\begin{equation}\Phi_{e}=\int_{0}^{z'} mg ds = mgz'\end{equation}
+
+Pressure/matric potential
+\begin{equation}\Phi_{p}=V \int_{0}^{p'} dp = V p'\end{equation}
+\begin{equation}p'=\frac{\mathbf{F}}{A}\end{equation}
+
+Elevation head
+\begin{equation}z=mgz' \frac{1}{mg}=z'\end{equation}
+
+Pressure/matric head
+\begin{equation}\psi=V\frac{\mathbf{F}}{A} \frac{1}{mg}= \psi A \frac{mg}{A}\frac{1}{mg}\end{equation} 
+
+Shallow water equation
+\begin{equation}\frac{\partial \psi_{s}}{\partial t} = \nabla \cdot (\mathbf{v} \psi_{s})\end{equation}
+
+Mannings equation
+\begin{equation}v=\frac{ \sqrt{S_{f}}} {n_{m}} \psi_s^{2/3}\end{equation}
+
+Overland flow boundary condition
+\begin{equation}K_{zz} k_r \frac{\partial (z+\psi_s)}{\partial z} = \frac{\partial \psi_s}{\partial t} - \nabla \cdot (\mathbf{v} \psi_s)\end{equation}
+
+Continuity equation
+\begin{equation}\frac{\partial \theta}{\partial t} = \nabla \cdot \mathbf{q} + \Gamma\end{equation}
+
+Specific storage
+\begin{equation}\frac{\partial \phi S_r}{\partial t}=\phi \frac{\partial S_r}{\partial t} +  S_r \frac{\partial \phi}{\partial t}\end{equation}
+\begin{equation}S_r \frac{\partial \phi}{\partial \psi} \frac{\partial \psi}{\partial t}=S_r S_s \frac{\partial \psi}{\partial t}\end{equation}
+
+
+
+\end{document}
